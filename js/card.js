@@ -7,6 +7,7 @@ function card(n){
 	this.direction="down";
 	var newDiv=document.createElement("div");
 		newDiv.className="card";
+		newDiv.style.backgroundImage="url(src/img/up"+this.number+".jpg)";
 		newDiv.id=i;
 	document.body.appendChild(newDiv);
 	this.c=newDiv;
