@@ -1,16 +1,23 @@
 
 
-
 var cards=[]; 
 var cardNumber=24;
 var cardDown=24;
 var clickTime=0;
+
 
 var openCard1=-1;
 var openCard2=-1;
 var cardImage=[];
 var countD=0;//確保兩張牌都蓋回去
 var countU=0;
+
+var preload =document.getElementById('preload');
+for (var i = 0; i < cardNumber/2; i++) {
+	preload.style.backgroundImage="url(src/img/up"+i+".jpg)";
+}
+
+
 for (var i = 0; i < cardNumber/2; i++) {
 	cardImage.push(i);
 	cardImage.push(i);
