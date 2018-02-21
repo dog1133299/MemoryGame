@@ -1,4 +1,4 @@
-
+ 
 function card(n){
 	this.r;
 	this.flip=0;
@@ -6,8 +6,7 @@ function card(n){
 	
 	this.direction="down";
 	var newDiv=document.createElement("div");
-		newDiv.className="card";
-		newDiv.style.backgroundImage="url(src/img/up"+this.number+".jpg)";
+		newDiv.className="card"; 
 		newDiv.id=i;
 	document.body.appendChild(newDiv);
 	this.c=newDiv;
@@ -58,3 +57,5 @@ function card(n){
 	return this;
 
 };
+
+ 

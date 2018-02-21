@@ -1,18 +1,14 @@
 
-
 var cards=[]; 
 var cardNumber=24;
 var cardDown=24;
 var clickTime=0;
-
 
 var openCard1=-1;
 var openCard2=-1;
 var cardImage=[];
 var countD=0;//確保兩張牌都蓋回去
 var countU=0;
-
- 
 
 for (var i = 0; i < cardNumber/2; i++) {
 	cardImage.push(i);
@@ -33,9 +29,7 @@ for (var i = 0; i < cardNumber; i++) {
 for (var i = 0; i <cardNumber; i++) {
 	//console.log(cardImage[i]);
 	var tmp =new card(cardImage[i]);
-	cards.push(tmp);
-
-	tmp.c.style.backgroundImage="url(src/img/down.jpg)";
+	cards.push(tmp); 
 	tmp.c.addEventListener("click", function(){
 		
 		if (openCard1==-1&&cards[this.id].direction=="down") {
@@ -68,8 +62,8 @@ for (var i = 0; i <cardNumber; i++) {
  		cards[openCard2].r=setInterval("cards[openCard2].rotate()",1);
  		
  	}else{
- 		cards[openCard1].c.className=cards[openCard1].c.className+" same";
- 		cards[openCard2].c.className=cards[openCard2].c.className+" same";
+ 		cards[openCard1].c.classList.add("same");
+ 		cards[openCard2].c.classList.add("same");
  		cardDown-=2;
  		if (cardDown!=0) {
  			openCard1=-1;
